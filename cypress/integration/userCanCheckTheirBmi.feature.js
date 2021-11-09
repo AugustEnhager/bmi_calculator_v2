@@ -3,11 +3,11 @@ describe("User can check their Bmi", () => {
     cy.visit("http://localhost:3000");
     cy.contains("BMI Calculator");
     cy.get("#weight").type("82");
-    cy.get("#height").type = "183";
+    cy.get("#height").type("183");
     cy.get("#Calculate").click();
   });
 
-  it('is expected to display a BMI value of 26.01', () => {
-    cy.get("#results").should("contain", "26.01")
+  it('is expected to display a BMI value of 24.47', () => {
+    cy.get("#results").should("contain", "24.47")
   });
 });
